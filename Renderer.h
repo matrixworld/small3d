@@ -22,6 +22,7 @@
 
 #ifndef SDLANDOPENGL
 #define SDLANDOPENGL
+
 #include "dependencies/GLEW/glew.h"
 #include <diego/glfw/include/GLFW/glfw3.h>
 //#include <miguel/sdl2_ttf/SDL_ttf.h>
@@ -106,6 +107,8 @@ private:
      * the rendered models
      */
     unordered_map<string, GLuint> *textures;
+    
+    void checkForOpenGLErrors(string when, bool abort);
 
 public:
     

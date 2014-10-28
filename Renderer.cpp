@@ -11,6 +11,9 @@ using namespace std;
 
 namespace small3d
 {
+    string openglErrorToString(GLenum error);
+    void outputOtherOpenGLErrors();
+    
 
 	string Renderer::loadShaderFromFile(const string &fileLocation)
 	{
@@ -110,11 +113,18 @@ namespace small3d
             throw EngineException(string("Unable to initialise GLFW"));
         }
         
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+        glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+        
         //todo: add full screen functionality
         window = glfwCreateWindow(width, height, "Avoid the Bug 3D", NULL, NULL);
         if (!window){
             throw EngineException(string("Unable to create GLFW window"));
         }
+        
+        LOGINFO("GLFW version: " + string(glfwGetVersionString()));
         
         glfwMakeContextCurrent(window);
 
@@ -159,18 +169,9 @@ namespace small3d
 
 	void Renderer::detectOpenGLVersion()
 	{
-        //glewExperimental=GL_TRUE;
+        glewExperimental=GL_TRUE;
 		int initResult = glewInit();
-        GLenum errorCode = glGetError();
         
-        if (errorCode != GL_NO_ERROR)
-        {
-            LOGERROR("OpenGL error while initialising GLEW");
-            throw EngineException(string((char*)gluErrorString(errorCode)));
-        }
-        
-        
-		
 		if (initResult != GLEW_OK)
 		{
 			throw EngineException("Error initialising GLEW");
@@ -180,7 +181,8 @@ namespace small3d
 			string glewVersion = (char*) glewGetString(GLEW_VERSION);
 			LOGINFO("Using GLEW version " + glewVersion);
 		}
-
+        
+        checkForOpenGLErrors("initialising GLEW", false);
 
 		string glVersion = (char*) glGetString(GL_VERSION);
 		glVersion = "OpenGL version supported by machine: " + glVersion;
@@ -203,6 +205,25 @@ namespace small3d
 		}
 
 	}
+    
+    void Renderer::checkForOpenGLErrors(string when, bool abort) {
+        GLenum errorCode = glGetError();
+        if (errorCode != GL_NO_ERROR)
+        {
+            LOGERROR("OpenGL error while " + when);
+            
+            do
+            {
+                LOGERROR(openglErrorToString(errorCode));
+                errorCode = glGetError();
+            }
+            while(errorCode != GL_NO_ERROR);
+            
+            if (abort)
+                throw EngineException("OpenGL error while " + when);
+        }
+    }
+
 
 	void Renderer::init(const int width, const int height, const bool fullScreen, 
 		const string ttfFontPath, const string shadersPath)
@@ -419,13 +440,8 @@ namespace small3d
 		glDisableVertexAttribArray(0);
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		GLenum errorCode = glGetError();
-        
-		if (errorCode != GL_NO_ERROR)
-		{
-			LOGERROR("OpenGL error while rendering textured quad");
-			throw EngineException(string((char*)gluErrorString(errorCode)));
-		}
+        //checkForOpenGLErrors("rendering textured quad", true);
+    
 	}
 
 	void Renderer::clearScreen()
@@ -559,12 +575,7 @@ namespace small3d
 
 			// Throw an exception if there was an error in OpenGL, during
 			// any of the above.
-			GLenum errorCode = glGetError();
-			if (errorCode != GL_NO_ERROR)
-			{
-				LOGERROR("OpenGL error while rendering scene");
-				throw EngineException(string((char*)gluErrorString(errorCode)));
-			}
+			
 
 			// Draw
 			glDrawElements(GL_TRIANGLES,
@@ -681,6 +692,44 @@ namespace small3d
 	{
 		glfwSwapBuffers(window);
 	}
+    
+    string openglErrorToString(GLenum error)
+    {
+        string errorString;
+        
+        switch(error) {
+            case GL_NO_ERROR:
+                errorString="GL_NO_ERROR: No error has been recorded. The value of this symbolic constant is guaranteed to be 0.";
+                break;
+            case  GL_INVALID_ENUM:
+                errorString="GL_INVALID_ENUM: An unacceptable value is specified for an enumerated argument. The offending command is ignored and has no other side effect than to set the error flag.";
+                break;
+            case  GL_INVALID_VALUE:
+                errorString="GL_INVALID_VALUE: A numeric argument is out of range. The offending command is ignored and has no other side effect than to set the error flag.";
+                break;
+            case  GL_INVALID_OPERATION:
+                errorString="GL_INVALID_OPERATION: The specified operation is not allowed in the current state. The offending command is ignored and has no other side effect than to set the error flag.";
+                break;
+            case  GL_INVALID_FRAMEBUFFER_OPERATION:
+                errorString="GL_INVALID_FRAMEBUFFER_OPERATION: The framebuffer object is not complete. The offending command is ignored and has no other side effect than to set the error flag.";
+                break;
+            case  GL_OUT_OF_MEMORY:
+                errorString="GL_OUT_OF_MEMORY: There is not enough memory left to execute the command. The state of the GL is undefined, except for the state of the error flags, after this error is recorded.";
+                break;
+            case  GL_STACK_UNDERFLOW:
+                errorString="GL_STACK_UNDERFLOW: An attempt has been made to perform an operation that would cause an internal stack to underflow.";
+                break;
+            case   GL_STACK_OVERFLOW:
+                errorString="GL_STACK_OVERFLOW: An attempt has been made to perform an operation that would cause an internal stack to overflow.";
+                break;
+            default:
+                errorString="Unknown error";
+                break;
+        }
+        return errorString;
+    }
+    
+    
 
 }
 
