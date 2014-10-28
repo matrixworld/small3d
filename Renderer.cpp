@@ -405,11 +405,8 @@ namespace small3d
             vertices[4], vertices[5], vertices[6], 1.0f,
             vertices[12], vertices[13], vertices[14], 1.0f,
             vertices[12], vertices[13], vertices[14], 1.0f,
-            vertices[8], vertices[9], vertices[10], 1.0f,
-            vertices[4], vertices[5], vertices[6], 1.0f
-            
-            //topX, bottomY, -0.5f, 1.0f,
-            //bottomX, bottomY, -0.5f, 1.0f
+            vertices[4], vertices[5], vertices[6], 1.0f,
+            vertices[8], vertices[9], vertices[10], 1.0f
         };
         
         
@@ -450,10 +447,8 @@ namespace small3d
 			0.0f, 0.0f,
             1.0f, 1.0f,
             1.0f, 1.0f,
-            1.0f, 0.0f,
-            0.0f, 0.0f
-			
-            
+            0.0f, 0.0f,
+            0.0f, 1.0f
 		};
 
 		GLuint coordBuffer = 0;
@@ -467,7 +462,7 @@ namespace small3d
 		glEnableVertexAttribArray(1);
 		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
-		glDrawArrays(GL_TRIANGLES, 0, 4);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
 
 		glDeleteBuffers(1, &boxBuffer);
 		glDeleteBuffers(1, &coordBuffer);
