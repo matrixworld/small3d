@@ -390,12 +390,44 @@ namespace small3d
 
 	void Renderer::renderTexturedQuad(const float *vertices, const string &textureName)
 	{
+        
+        /*float boxVerts[16] =
+        {
+            bottomX, topY, -0.5f, 1.0f,
+            topX, topY, -0.5f, 1.0f,
+            topX, bottomY, -0.5f, 1.0f,
+            bottomX, bottomY, -0.5f, 1.0f
+        };*/
+        
+        float triangleVerts[24] =
+        {
+            vertices[0], vertices[1], vertices[2], 1.0f,
+            vertices[4], vertices[5], vertices[6], 1.0f,
+            vertices[12], vertices[13], vertices[14], 1.0f,
+            vertices[12], vertices[13], vertices[14], 1.0f,
+            vertices[8], vertices[9], vertices[10], 1.0f,
+            vertices[4], vertices[5], vertices[6], 1.0f
+            
+            //topX, bottomY, -0.5f, 1.0f,
+            //bottomX, bottomY, -0.5f, 1.0f
+        };
+        
+        
 		GLuint textureHandle = getTextureHandle(textureName);
 
 		if (textureHandle == 0)
 		{
 			throw EngineException("Texture " + textureName + "has not been generated");
 		}
+        
+        GLuint vao = 0;
+        if (isOpenGL33Supported)
+        {
+            // Generate VAO
+            glGenVertexArrays(1, &vao);
+            glBindVertexArray(vao);
+        }
+        
 		glBindTexture(GL_TEXTURE_2D, textureHandle);
 
 		glUseProgram(textProgram);
@@ -407,17 +439,21 @@ namespace small3d
 
 		glBindBuffer(GL_ARRAY_BUFFER, boxBuffer);
 		glBufferData(GL_ARRAY_BUFFER,
-			sizeof(float) * 16, // 4 times 4 floats
-			vertices,
+			sizeof(float) * 24,
+			triangleVerts,
 			GL_STATIC_DRAW);
 		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
 
-		float textureCoords[8] =
+		float textureCoords[12] =
 		{
 			1.0f, 0.0f,
 			0.0f, 0.0f,
-			0.0f, 1.0f,
-			1.0f, 1.0f
+            1.0f, 1.0f,
+            1.0f, 1.0f,
+            1.0f, 0.0f,
+            0.0f, 0.0f
+			
+            
 		};
 
 		GLuint coordBuffer = 0;
@@ -425,13 +461,13 @@ namespace small3d
 		glGenBuffers(1,&coordBuffer);
 		glBindBuffer(GL_ARRAY_BUFFER, coordBuffer);
 		glBufferData(GL_ARRAY_BUFFER,
-			sizeof(textureCoords),
+			sizeof(float) * 12,
 			&textureCoords,
 			GL_DYNAMIC_DRAW);
 		glEnableVertexAttribArray(1);
 		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
-		glDrawArrays(GL_QUADS, 0, 4);
+		glDrawArrays(GL_TRIANGLES, 0, 4);
 
 		glDeleteBuffers(1, &boxBuffer);
 		glDeleteBuffers(1, &coordBuffer);
@@ -439,8 +475,14 @@ namespace small3d
 		glDisableVertexAttribArray(1);
 		glDisableVertexAttribArray(0);
 		glBindTexture(GL_TEXTURE_2D, 0);
+        
+        if (isOpenGL33Supported)
+        {
+            glDeleteVertexArrays(1, &vao);
+            glBindVertexArray(0);
+        }
 
-        //checkForOpenGLErrors("rendering textured quad", true);
+        checkForOpenGLErrors("rendering textured quad", true);
     
 	}
 
