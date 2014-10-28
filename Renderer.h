@@ -23,9 +23,8 @@
 #ifndef SDLANDOPENGL
 #define SDLANDOPENGL
 #include "dependencies/GLEW/glew.h"
-#include <miguel/sdl2/include/SDL_opengl.h>
-#include <miguel/sdl2/include/SDL.h>
-#include <miguel/sdl2_ttf/SDL_ttf.h>
+#include <diego/glfw/include/GLFW/glfw3.h>
+//#include <miguel/sdl2_ttf/SDL_ttf.h>
 #endif //SDLANDOPENGL
 
 #include <memory>
@@ -57,9 +56,9 @@ private:
     shared_ptr<Configuration> cfg;
     shared_ptr<EngineLog> log;
 
-	SDL_Window* sdlWindow;
+	
 
-    TTF_Font *font;
+    //TTF_Font *font;
 
 	string ttfFontPath;
 
@@ -109,6 +108,11 @@ private:
     unordered_map<string, GLuint> *textures;
 
 public:
+    
+    /**
+     * The GLFW window, where the game is "hosted"
+     */
+    GLFWwindow* window;
 
     /**
      * Constructor
@@ -190,8 +194,8 @@ public:
 	 * @param bottomX The bottom x coordinate of the text rectangle
 	 * @param bottomY The bottom y coordinate of the text rectangle
      */
-	void renderText(const string &text, const SDL_Color &colour, 
-		const float &topX, const float &topY, const float &bottomX, const float &bottomY);
+	//void renderText(const string &text, const SDL_Color &colour,
+	//	const float &topX, const float &topY, const float &bottomX, const float &bottomY);
 
     /**
      * This is a double buffered system and this commands swaps

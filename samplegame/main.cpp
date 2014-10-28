@@ -19,11 +19,34 @@ using namespace small3d;
 
 const GLuint frameRate = 60;
 
+KeyInput input;
+
+void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    if (key == GLFW_KEY_DOWN && action == GLFW_PRESS)
+        input.down = true;
+    if (key == GLFW_KEY_UP && action == GLFW_PRESS)
+        input.up = true;
+    if (key == GLFW_KEY_LEFT && action == GLFW_PRESS)
+        input.left = true;
+    if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
+        input.right = true;
+    if (key == GLFW_KEY_ENTER && action == GLFW_PRESS)
+        input.enter = true;
+    if (key == GLFW_KEY_DOWN && action == GLFW_RELEASE)
+        input.down = false;
+    if (key == GLFW_KEY_UP && action == GLFW_RELEASE)
+        input.up = false;
+    if (key == GLFW_KEY_LEFT && action == GLFW_RELEASE)
+        input.left = false;
+    if (key == GLFW_KEY_RIGHT && action == GLFW_RELEASE)
+        input.right = false;
+    if (key == GLFW_KEY_ENTER && action == GLFW_RELEASE)
+        input.enter = false;
+}
+
 int main(int argc, char** argv)
 {
-
-	KeyInput input;
-
 	shared_ptr<EngineLog> log(new EngineLog(cout));
 
 	shared_ptr<Configuration> cfg(new Configuration(log));
@@ -38,47 +61,23 @@ int main(int argc, char** argv)
 		// program main loop
 		bool done = false;
 
-		// ticks for setting the frame rate
-		GLuint ticks = SDL_GetTicks();
-		GLuint prevTicks = ticks;
-		GLuint ticksInterval = 1000 / frameRate;
+		// seconds, for setting the framerate
+		double seconds = glfwGetTime();
+		double prevSeconds = seconds;
+		double secondsInterval = 1.0 / frameRate;
+        
+        glfwSetKeyCallback(pv->renderer->window, keyCallback);
 
-		while (!done)
+		while (!glfwWindowShouldClose(pv->renderer->window))
 		{
 
-			SDL_Event event;
-			if (SDL_PollEvent(&event))
-			{
-
-				const Uint8 *keyState = SDL_GetKeyboardState(NULL);
-
-				input.up = keyState[SDL_SCANCODE_UP] == 1;
-				input.down = keyState[SDL_SCANCODE_DOWN] == 1;
-				input.left = keyState[SDL_SCANCODE_LEFT] == 1;
-				input.right = keyState[SDL_SCANCODE_RIGHT] == 1;
-				input.enter = keyState[SDL_SCANCODE_RETURN] == 1;
-
-				switch (event.type)
-				{
-
-				case SDL_QUIT:
-					done = true;
-					break;
-
-				case SDL_KEYDOWN:
-					{
-						if (event.key.keysym.sym == SDLK_ESCAPE)
-							done = true;
-						break;
-					}
-				}
-			}
-
-			ticks = SDL_GetTicks();
-			if (ticks - prevTicks > ticksInterval)
+            glfwPollEvents();
+            
+			seconds = glfwGetTime();
+			if (seconds - prevSeconds > secondsInterval)
 			{
 				gameLogic->process(input);
-				prevTicks = ticks;
+				prevSeconds = seconds;
 				pv->render(gameLogic->gameScene);
 			}
 		}

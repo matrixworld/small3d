@@ -8,3 +8,6 @@
 
 #Annoying thumbs file that appears everywhere :)
 Thumbs.db
+
+#Mac DS_store
+.DS_store

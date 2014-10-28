@@ -178,6 +178,12 @@ TEST(ModelTest, LoadModel) {
 		<< modelWithNoTexture->getNormalsDataComponentCount() << endl
 		<< "Texture coordinates count: "
 		<< modelWithNoTexture->getTextureCoordsDataComponentCount() << endl;
+    cout << "Normals data:" << endl;
+    for (int idx = 0; idx < modelWithNoTexture->getNormalsDataComponentCount(); idx +=3) {
+        cout<<modelWithNoTexture->getNormalsData()[idx] << ", " <<
+        modelWithNoTexture->getNormalsData()[idx] << ", " <<
+        modelWithNoTexture->getNormalsData()[idx] << endl;
+    }
 
 }
 

@@ -25,9 +25,11 @@ namespace AvoidTheBug3D {
 		shared_ptr<Configuration> cfg;
 		shared_ptr<EngineLog> log;
 
-		shared_ptr<Renderer> renderer;
+		
 
 	public:
+        
+        shared_ptr<Renderer> renderer;
 
 		/**
 		* Constructor

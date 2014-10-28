@@ -62,11 +62,11 @@ namespace small3d
 		this->cfg = cfg;
 		this->log = log;
 		isOpenGL33Supported = false;
-		sdlWindow = 0;
+		window = 0;
 		program = 0;
 		textProgram = 0;
 		textures = new unordered_map<string, GLuint>();
-		font = NULL;
+		//font = NULL;
 		noShaders = false;
 		
 	}
@@ -98,57 +98,27 @@ namespace small3d
 			glDeleteProgram(program);
 		}
 
-		TTF_CloseFont(font);
-		TTF_Quit();
+		//TTF_CloseFont(font);
+		//TTF_Quit();
 
-		if (sdlWindow != 0)
-		{
-			SDL_DestroyWindow(sdlWindow);
-		}
-		SDL_Quit();
+		glfwTerminate();
 	}
 
 	void Renderer::initSDL(int width, int height, bool fullScreen)
 	{
-		sdlWindow = 0;
+        if (!glfwInit()){
+            throw EngineException(string("Unable to initialise GLFW"));
+        }
+        
+        //todo: add full screen functionality
+        window = glfwCreateWindow(width, height, "Avoid the Bug 3D", NULL, NULL);
+        if (!window){
+            throw EngineException(string("Unable to create GLFW window"));
+        }
+        
+        glfwMakeContextCurrent(window);
 
-		// initialize SDL video
-		if (SDL_Init(SDL_INIT_VIDEO) < 0)
-		{
-			LOGERROR(SDL_GetError());
-			throw EngineException(string("Unable to initialise SDL"));
-		}
-
-		//SDL_GL_SetAttribute( SDL_GL_CONTEXT_MAJOR_VERSION, 3 );
-		//SDL_GL_SetAttribute( SDL_GL_CONTEXT_MINOR_VERSION, 3 );
-		//SDL_GL_SetAttribute( SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE );
-
-		SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 8);
-		SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
-		SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
-		SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 8);
-		SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-
-		Uint32 flags = fullScreen ? SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN_DESKTOP :
-			SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN;
-
-		sdlWindow = SDL_CreateWindow("Avoid the Bug 3D", SDL_WINDOWPOS_CENTERED,
-			SDL_WINDOWPOS_CENTERED, width, height,
-			flags);
-
-		if (SDL_GL_CreateContext( sdlWindow ) == NULL)
-		{
-			LOGERROR(SDL_GetError());
-			throw EngineException(string("Unable to create GL context"));
-		}
-
-		if (!sdlWindow)
-		{
-			LOGERROR(SDL_GetError());
-			throw EngineException("Unable to set video");
-		}
-
-		if(TTF_Init()==-1)
+		/*if(TTF_Init()==-1)
 		{
 			LOGERROR(TTF_GetError());
 			throw EngineException("Unable to initialise font system");
@@ -167,7 +137,7 @@ namespace small3d
 		else
 		{
 			LOGINFO("TTF font loaded successfully");
-		}
+		}*/
 
 	}
 
@@ -189,7 +159,17 @@ namespace small3d
 
 	void Renderer::detectOpenGLVersion()
 	{
+        //glewExperimental=GL_TRUE;
 		int initResult = glewInit();
+        GLenum errorCode = glGetError();
+        
+        if (errorCode != GL_NO_ERROR)
+        {
+            LOGERROR("OpenGL error while initialising GLEW");
+            throw EngineException(string((char*)gluErrorString(errorCode)));
+        }
+        
+        
 		
 		if (initResult != GLEW_OK)
 		{
@@ -201,11 +181,12 @@ namespace small3d
 			LOGINFO("Using GLEW version " + glewVersion);
 		}
 
+
 		string glVersion = (char*) glGetString(GL_VERSION);
 		glVersion = "OpenGL version supported by machine: " + glVersion;
 		LOGINFO(glVersion);
 
-		if (glewIsSupported("GL_VERSION_3_3"))
+		if (glewIsSupported("GL_VERSION_3_3")) 
 		{
 			LOGINFO("Ready for OpenGL 3.3");
 			isOpenGL33Supported = true;
@@ -231,7 +212,7 @@ namespace small3d
 		this->initSDL(width, height, fullScreen);
 
 		this->detectOpenGLVersion();
-
+        
 		string vertexShaderPath;
 		string fragmentShaderPath;
 		string textVertexShaderPath;
@@ -257,14 +238,20 @@ namespace small3d
 		}
 
 		glViewport(0, 0, (GLsizei) width, (GLsizei) height);
+        
+        
+
 
 		glEnable(GL_DEPTH_TEST);
-		glDepthMask(GL_TRUE);
+        
+        		glDepthMask(GL_TRUE);
 		glDepthFunc(GL_LEQUAL);
 		glDepthRange(0.0f, 10.0f);
 
 		glEnable (GL_BLEND);
 		glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        
+        
 
 		GLuint vertexShader = compileShader(vertexShaderPath,
 			GL_VERTEX_SHADER);
@@ -419,7 +406,7 @@ namespace small3d
 		glBufferData(GL_ARRAY_BUFFER,
 			sizeof(textureCoords),
 			&textureCoords,
-			GL_STATIC_DRAW);
+			GL_DYNAMIC_DRAW);
 		glEnableVertexAttribArray(1);
 		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
@@ -433,6 +420,7 @@ namespace small3d
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		GLenum errorCode = glGetError();
+        
 		if (errorCode != GL_NO_ERROR)
 		{
 			LOGERROR("OpenGL error while rendering textured quad");
@@ -473,47 +461,32 @@ namespace small3d
 
 			// Pass the vertex positions to the shaders
 			glGenBuffers(1, &positionBufferObject);
-
+            glEnableVertexAttribArray(0);
 			glBindBuffer(GL_ARRAY_BUFFER, positionBufferObject);
+            glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, (void*)0);
 			glBufferData(GL_ARRAY_BUFFER,
 				it->get()->getModel().getVertexDataSize(),
 				it->get()->getModel().getVertexData(),
-				GL_STATIC_DRAW);
-			glEnableVertexAttribArray(0);
-			glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
+				GL_DYNAMIC_DRAW);
+            glBindBuffer(GL_ARRAY_BUFFER, 0);
+			
 
 			// Pass vertex indexes
-
 			glGenBuffers(1, &indexBufferObject);
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObject);
 			glBufferData(GL_ELEMENT_ARRAY_BUFFER,
 				it->get()->getModel().getIndexDataSize(),
 				it->get()->getModel().getIndexData(),
-				GL_STATIC_DRAW);
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObject);
-
-
-			// Index attribute array
-			glEnableVertexAttribArray(1);
-
-			// Lighting
-
-			Vector3 lightDirection(0.0f, 0.9f, 0.2f);
-			GLuint lightDirectionUniform = glGetUniformLocation(program,
-				"lightDirection");
-			float ld[3];
-			lightDirection.getValueArray(ld);
-			glUniform3fv(lightDirectionUniform, 1,
-				ld);
+				GL_DYNAMIC_DRAW);
 
 			// Normals
 			glGenBuffers(1, &normalsBufferObject);
+            glEnableVertexAttribArray(1);
 			glBindBuffer(GL_ARRAY_BUFFER, normalsBufferObject);
+            glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
 			glBufferData(GL_ARRAY_BUFFER,
 				it->get()->getModel().getNormalsDataSize(),
-				it->get()->getModel().getNormalsData(), GL_STATIC_DRAW);
-
-			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void*) 0);
+				it->get()->getModel().getNormalsData(), GL_DYNAMIC_DRAW);
 			glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 			// Find the colour uniform
@@ -539,14 +512,13 @@ namespace small3d
 				glBindTexture(GL_TEXTURE_2D, texture);
 
 				// UV Coordinates
-
 				glGenBuffers(1, &uvBufferObject);
+                glEnableVertexAttribArray(2);
 				glBindBuffer(GL_ARRAY_BUFFER, uvBufferObject);
+                glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, (void*)0);
 				glBufferData(GL_ARRAY_BUFFER,
 					it->get()->getModel().getTextureCoordsDataSize(),
-					it->get()->getModel().getTextureCoordsData(), GL_STATIC_DRAW);
-				glEnableVertexAttribArray(2);
-				glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, 0);
+					it->get()->getModel().getTextureCoordsData(), GL_DYNAMIC_DRAW);
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 			}
@@ -557,6 +529,15 @@ namespace small3d
 				it->get()->getColour()->getValueArray(objCol);
 				glUniform4fv(colourUniform, 1, objCol);
 			}
+            
+            // Lighting
+            Vector3 lightDirection(0.0f, 0.9f, 0.2f);
+            GLuint lightDirectionUniform = glGetUniformLocation(program,
+                                                                "lightDirection");
+            float ld[3];
+            lightDirection.getValueArray(ld);
+            glUniform3fv(lightDirectionUniform, 1,
+                         ld);
 
 			// Rotation
 
@@ -633,7 +614,7 @@ namespace small3d
 
 	}
 
-	void Renderer::renderText(const string &text, const SDL_Color &colour, 
+	/*void Renderer::renderText(const string &text, const SDL_Color &colour,
 		const float &topX, const float &topY, const float &bottomX, const float &bottomY)
 	{
 
@@ -694,11 +675,11 @@ namespace small3d
 		};
 
 		this->renderTexturedQuad(boxVerts, "text_" + text);
-	}
+	}*/
 
 	void Renderer::swapBuffers()
 	{
-		SDL_GL_SwapWindow(sdlWindow);
+		glfwSwapBuffers(window);
 	}
 
 }
