@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['devicename',['DeviceName',['../struct___g_p_u___d_e_v_i_c_e.html#a604bfab61f1a2c5d1e635837d369ba14',1,'_GPU_DEVICE']]],
-  ['devicestring',['DeviceString',['../struct___g_p_u___d_e_v_i_c_e.html#aff8b7920ccc85afcd6f325da6cdb0b73',1,'_GPU_DEVICE']]]
+  ['lightdirection',['lightDirection',['../classsmall3d_1_1_renderer.html#a77353e63ccea1c4f33ff9cba9eb81978',1,'small3d::Renderer']]],
+  ['logger',['logger',['../_logger_8cpp.html#a602215fa5e4da4e67434e454bbbf39ae',1,'logger():&#160;Logger.cpp'],['../_logger_8h.html#a602215fa5e4da4e67434e454bbbf39ae',1,'logger():&#160;Logger.cpp']]]
 ];

@@ -21,10 +21,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="small3dTempLogo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">small3d
+   &#160;<span id="projectnumber">4</span>
    </div>
-   <div id="projectbrief">A small, simple 3D game engine</div>
+   <div id="projectbrief">A small, no fuss, 3D game engine</div>
   </td>
  </tr>
  </tbody>
@@ -65,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -77,10 +79,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="namespacesmall3d.html" title="The namespace of the small3d engine. ">small3d</a> </div>  </div>
+<div class="title"><a class="el" href="namespacesmall3d.html">small3d</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A small, no fuss, 3D game engine</p>
+<div class="textblock"><p><em>A small, no fuss, 3D game engine</em></p>
+<p><a href="http://www.biicode.com/dimitrikourk/dimitrikourk/small3d/master/4">![biicode block](http://img.shields.io/badge/dimitrikourk%2Fsmall3d-DEV%3A%204-yellow.svg)</a> <a href="https://travis-ci.org/dimitrikourk/small3d">![Build Status](https://travis-ci.org/dimitrikourk/small3d.svg?branch=master)</a></p>
+<p>Quick start guide: <a href="http://goo.gl/5TYOv2">http://goo.gl/5TYOv2</a></p>
+<p>For requests for assistance, please open an issue on the project's source code repository: <a href="https://github.com/dimitrikourk/small3d/issues">https://github.com/dimitrikourk/small3d/issues</a></p>
+<p>API documentation: <a href="http://small3d.org/namespacesmall3d.html">http://small3d.org/namespacesmall3d.html</a></p>
+<div class="image">
+<img src="https://cloud.githubusercontent.com/assets/875167/4695565/ca5fafb2-5808-11e4-8a81-d186db8b335c.png"  alt="Screen capture from the first game that runs on small3d"/>
+</div>
+<p>This is a free, open-source, minimalistic 3D game engine, developed in C++ and based on modern OpenGL. It is meant for those who are in a hurry to produce something playable, but prefer to understand what is happening under the hood, rather than use a technology that abstracts the low-level details away.</p>
+<p>It has been derived from a simple game, which has been under development for more than a year, as a learning exercise (introduction: <a href="http://goo.gl/itn6x5,">http://goo.gl/itn6x5,</a> blog: <a href="http://goo.gl/7hCTPA">http://goo.gl/7hCTPA</a>). I have decided to separate the game from its engine and make the engine available for easy reuse, as a biicode block (<a href="http://goo.gl/WKS0Hv">http://goo.gl/WKS0Hv</a>). The game is now provided as a sample, in the "samplegame" folder within the block, and it demonstrates how the features of the engine can be used.</p>
+<p>The previous version of <a class="el" href="namespacesmall3d.html">small3d</a> (3) is stable, but note that it is only a proof-of-technology. You can definitely make interesting things with it, but it is not complete. A lot of values are hardcoded, like the dimensions of the 3D scene or the position of the camera. It also needs a few more features, like better control of text rendering and sound. This version (4) of the block will be the first official release, with all of these matters addressed, a comprehensive, easy to understand API and an architecture that abides to the "Don`t make me use your design" principle (<a href="http://blog.biicode.com/software-design-proposal/">http://blog.biicode.com/software-design-proposal/</a>). At present, it is under heavy development and will be changing a lot. Feel free to make suggestions! <a href="https://github.com/dimitrikourk/small3d/issues">https://github.com/dimitrikourk/small3d/issues</a></p>
+<h2>Compatibility </h2>
+<p><b>Debian Wheezy - Eclipse</b>: No problems</p>
+<p><b>Debian Wheezy - Command Line</b>: No problems</p>
+<p><b>Windows - Visual Studio</b>: No problems, but make sure you use biicode v7 of google/gtest (check bii/requirements.bii). There are some conflicts when v8 is used. I am working on them. Note that, by default, bii will compile projects in Windows using MinGW's compiler. In order to use Visual Studio, issue one of the following commands from the directory of your project, depending on which version you have installed:</p>
+<p>bii cpp:configure -G"Visual Studio 10 2010"</p>
+<p>bii cpp:configure -G"Visual Studio 11 2012"</p>
+<p>bii cpp:configure -G"Visual Studio 12 2013"</p>
+<p><b>Windows - MinGW</b>: The engine and sample game will compile and work under MinGW but support for that environment is a little flaky (see <a href="https://github.com/dimitrikourk/small3d/blob/master/aboutMinGW.txt">https://github.com/dimitrikourk/small3d/blob/master/aboutMinGW.txt</a>). Also, with MinGW, the build time is quite long, so I would strongly recommend using the Visual Studio compiler. You can get Visual Studio Express for free:</p>
+<p><a href="http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-desktop">http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-desktop</a></p>
+<p><b>Mac</b>: No problems. Many thanks to hithwen for for providing the first successful compilation on a Mac (<a href="https://github.com/dimitrikourk/small3d/commit/26b85780a3ef03c9d5c11f1527803173feaadd1c">https://github.com/dimitrikourk/small3d/commit/26b85780a3ef03c9d5c11f1527803173feaadd1c</a>) and for testing the block.</p>
+<p><b>Others:</b> I would expect that the engine and the sample game should work on most other environments with no problems. Before migrating to biicode, I had also spent time developing the engine on Ubuntu and Fedora, so the code is prety mature cross-platform-wise.</p>
 <h2>Note about 3D models and textures </h2>
 <p>For the time being, the engine can only read 3D models from Wavefront .obj files. There are many ways to create such a file, but I am exporting them from Blender.</p>
 <p>When exporting the models to Wavefront .obj files, make sure you set the options "Include Normals", "Triangulate Faces", and "Keep Vertex Order". Only one object should be exported to each Wavefront file, because the engine cannot read more than one. The model has to have been set to have smooth shading in Blender and double vertices have to have been deleted before the export. Otherwise, when rendering with shaders, lighting will not work, since there will be multiple normals for each vertex and, with indexed drawing, the normals listed later in the exported file for some vertices will overwrite the previous ones.</p>
@@ -90,7 +113,7 @@ UVs" must also be set. The texture should be saved as a PNG file, since this is 
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 19 2014 18:50:02 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 19 2014 01:41:14 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

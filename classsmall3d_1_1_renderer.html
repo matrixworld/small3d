@@ -21,10 +21,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="small3dTempLogo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">small3d
+   &#160;<span id="projectnumber">4</span>
    </div>
-   <div id="projectbrief">A small, simple 3D game engine</div>
+   <div id="projectbrief">A small, no fuss, 3D game engine</div>
   </td>
  </tr>
  </tbody>
@@ -38,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -73,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,73 +91,72 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classsmall3d_1_1_renderer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">small3d::Renderer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using OpenGL v2.1. ">Renderer</a> class, which can render using OpenGL v2.1.  
+<p><a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using either OpenGL v3.3 or v2.1. ">Renderer</a> class, which can render using either OpenGL v3.3 or v2.1.  
  <a href="classsmall3d_1_1_renderer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5aec8cb6a8b4fab3332b7c84482ab4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#ac5aec8cb6a8b4fab3332b7c84482ab4e">Renderer</a> (const shared_ptr&lt; <a class="el" href="classsmall3d_1_1_configuration.html">Configuration</a> &gt; cfg, const shared_ptr&lt; <a class="el" href="classsmall3d_1_1_engine_log.html">EngineLog</a> &gt; log)</td></tr>
-<tr class="separator:ac5aec8cb6a8b4fab3332b7c84482ab4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a239f0f3cdf74bff3ce9b9fc9c3353512"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a239f0f3cdf74bff3ce9b9fc9c3353512">init</a> (const <a class="el" href="wglew_8h.html#a500a82aecba06f4550f6849b8099ca21">int</a> <a class="el" href="glew_8h.html#aa105b18f96e6bc2485cb7f576a7fb9ba">width</a>, const <a class="el" href="wglew_8h.html#a500a82aecba06f4550f6849b8099ca21">int</a> <a class="el" href="glew_8h.html#aa214bd63e12f7ddf524c83894fcc69a7">height</a>, const bool fullScreen, const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> ttfFontPath=&quot;../blocks/dimitrikourk/small3d/Fonts/CrusoeText-Regular.ttf&quot;, const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> shadersPath=&quot;../blocks/dimitrikourk/small3d/Shaders/&quot;)</td></tr>
-<tr class="separator:a239f0f3cdf74bff3ce9b9fc9c3353512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ae1a6490406bdd61ca6f90cfc6828d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glew_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a0ae1a6490406bdd61ca6f90cfc6828d1">generateTexture</a> (const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;<a class="el" href="glew_8h.html#a5c4947d4516dd7cfa3505ce3a648a4ef">name</a>, const float *<a class="el" href="glew_8h.html#af1de2b5e600991636b673dcda0fa5342">texture</a>, const <a class="el" href="wglew_8h.html#a500a82aecba06f4550f6849b8099ca21">int</a> <a class="el" href="glew_8h.html#aa105b18f96e6bc2485cb7f576a7fb9ba">width</a>, const <a class="el" href="wglew_8h.html#a500a82aecba06f4550f6849b8099ca21">int</a> <a class="el" href="glew_8h.html#aa214bd63e12f7ddf524c83894fcc69a7">height</a>)</td></tr>
+<tr class="memitem:a014d65e85109726ab2825baaf4c656c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a014d65e85109726ab2825baaf4c656c8">Renderer</a> ()</td></tr>
+<tr class="separator:a014d65e85109726ab2825baaf4c656c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f817f1d00f0c5b5103f3d86fb2635e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a3f817f1d00f0c5b5103f3d86fb2635e5">init</a> (const int width, const int height, const bool fullScreen, const string ttfFontPath=&quot;dimitrikourk/small3d/samplegame/resources/fonts/CrusoeText/CrusoeText-Regular.ttf&quot;, const string shadersPath=&quot;dimitrikourk/small3d/resources/shaders/&quot;)</td></tr>
+<tr class="separator:a3f817f1d00f0c5b5103f3d86fb2635e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae1a6490406bdd61ca6f90cfc6828d1"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a0ae1a6490406bdd61ca6f90cfc6828d1">generateTexture</a> (const string &amp;name, const float *texture, const int width, const int height)</td></tr>
 <tr class="separator:a0ae1a6490406bdd61ca6f90cfc6828d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7193d8a7dd660e8fd4ae0d536db00657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glew_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a7193d8a7dd660e8fd4ae0d536db00657">getTextureHandle</a> (const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;<a class="el" href="glew_8h.html#a5c4947d4516dd7cfa3505ce3a648a4ef">name</a>)</td></tr>
+<tr class="memitem:a34b09c3a99211d615223d63164b5efcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a34b09c3a99211d615223d63164b5efcc">deleteTexture</a> (const string &amp;name)</td></tr>
+<tr class="memdesc:a34b09c3a99211d615223d63164b5efcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the texture indicated by the given name.  <a href="#a34b09c3a99211d615223d63164b5efcc">More...</a><br /></td></tr>
+<tr class="separator:a34b09c3a99211d615223d63164b5efcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7193d8a7dd660e8fd4ae0d536db00657"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a7193d8a7dd660e8fd4ae0d536db00657">getTextureHandle</a> (const string &amp;name)</td></tr>
 <tr class="separator:a7193d8a7dd660e8fd4ae0d536db00657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04892bb74f5b6e4d7b7edb214e1bd576"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a04892bb74f5b6e4d7b7edb214e1bd576">renderTexturedQuad</a> (const float *vertices, const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;textureName)</td></tr>
-<tr class="separator:a04892bb74f5b6e4d7b7edb214e1bd576"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9523e78acf3e6d62ae301ca650c9087c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a9523e78acf3e6d62ae301ca650c9087c">clearScreen</a> ()</td></tr>
+<tr class="memitem:aa43b489f20b4befa634ed776bdf15b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#aa43b489f20b4befa634ed776bdf15b80">renderImage</a> (const float *vertices, const string &amp;textureName)</td></tr>
+<tr class="separator:aa43b489f20b4befa634ed776bdf15b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9523e78acf3e6d62ae301ca650c9087c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a9523e78acf3e6d62ae301ca650c9087c">clearScreen</a> ()</td></tr>
 <tr class="separator:a9523e78acf3e6d62ae301ca650c9087c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa80da59946832e933adcc554236f1fca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#aa80da59946832e933adcc554236f1fca">renderSceneObjects</a> (const shared_ptr&lt; vector&lt; shared_ptr&lt; <a class="el" href="classsmall3d_1_1_scene_object.html">SceneObject</a> &gt; &gt; &gt; sceneObjects)</td></tr>
-<tr class="separator:aa80da59946832e933adcc554236f1fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a946f63bb3e822ff0e30a19a96e8fcf99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a946f63bb3e822ff0e30a19a96e8fcf99">renderText</a> (const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;text, const SDL_Color &amp;colour, const float &amp;topX, const float &amp;topY, const float &amp;bottomX, const float &amp;bottomY)</td></tr>
+<tr class="memitem:aff4d928b9428578cc6ea2de8985f9389"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#aff4d928b9428578cc6ea2de8985f9389">renderSceneObject</a> (shared_ptr&lt; <a class="el" href="classsmall3d_1_1_scene_object.html">SceneObject</a> &gt; sceneObject)</td></tr>
+<tr class="separator:aff4d928b9428578cc6ea2de8985f9389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946f63bb3e822ff0e30a19a96e8fcf99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a946f63bb3e822ff0e30a19a96e8fcf99">renderText</a> (const string &amp;text, const SDL_Color &amp;colour, const float &amp;topX, const float &amp;topY, const float &amp;bottomX, const float &amp;bottomY)</td></tr>
 <tr class="separator:a946f63bb3e822ff0e30a19a96e8fcf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdc83f2aaaf3f41f35e99c1eabc6ac98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#acdc83f2aaaf3f41f35e99c1eabc6ac98">swapBuffers</a> ()</td></tr>
+<tr class="memitem:acdc83f2aaaf3f41f35e99c1eabc6ac98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#acdc83f2aaaf3f41f35e99c1eabc6ac98">swapBuffers</a> ()</td></tr>
 <tr class="separator:acdc83f2aaaf3f41f35e99c1eabc6ac98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32163440246ed8ea5016e15dfc781775"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a32163440246ed8ea5016e15dfc781775">~Renderer</a> ()</td></tr>
 <tr class="separator:a32163440246ed8ea5016e15dfc781775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a77353e63ccea1c4f33ff9cba9eb81978"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a77353e63ccea1c4f33ff9cba9eb81978">lightDirection</a></td></tr>
+<tr class="memdesc:a77353e63ccea1c4f33ff9cba9eb81978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector indicating the direction of the light in the scene.  <a href="#a77353e63ccea1c4f33ff9cba9eb81978">More...</a><br /></td></tr>
+<tr class="separator:a77353e63ccea1c4f33ff9cba9eb81978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bcac66877275b4f0121ff88547f9874"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a1bcac66877275b4f0121ff88547f9874">zNear</a></td></tr>
+<tr class="memdesc:a1bcac66877275b4f0121ff88547f9874"><td class="mdescLeft">&#160;</td><td class="mdescRight">The near Z value.  <a href="#a1bcac66877275b4f0121ff88547f9874">More...</a><br /></td></tr>
+<tr class="separator:a1bcac66877275b4f0121ff88547f9874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a489ee5114ea7675ce47d6d2a915b2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html#a27a489ee5114ea7675ce47d6d2a915b2">zFar</a></td></tr>
+<tr class="memdesc:a27a489ee5114ea7675ce47d6d2a915b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The far Z value.  <a href="#a27a489ee5114ea7675ce47d6d2a915b2">More...</a><br /></td></tr>
+<tr class="separator:a27a489ee5114ea7675ce47d6d2a915b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using OpenGL v2.1. ">Renderer</a> class, which can render using OpenGL v2.1. </p>
+<div class="textblock"><p><a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using either OpenGL v3.3 or v2.1. ">Renderer</a> class, which can render using either OpenGL v3.3 or v2.1. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac5aec8cb6a8b4fab3332b7c84482ab4e"></a>
+<a class="anchor" id="a014d65e85109726ab2825baaf4c656c8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">small3d::Renderer::Renderer </td>
           <td>(</td>
-          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classsmall3d_1_1_configuration.html">Configuration</a> &gt;&#160;</td>
-          <td class="paramname"><em>cfg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classsmall3d_1_1_engine_log.html">EngineLog</a> &gt;&#160;</td>
-          <td class="paramname"><em>log</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cfg</td><td>The game's configuration object </td></tr>
-    <tr><td class="paramname">log</td><td>The game's logging object </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Constructor </p>
 
 </div>
 </div>
@@ -182,7 +182,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a> small3d::Renderer::clearScreen </td>
+          <td class="memname">void small3d::Renderer::clearScreen </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -193,14 +193,38 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a34b09c3a99211d615223d63164b5efcc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void small3d::Renderer::deleteTexture </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes the texture indicated by the given name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a0ae1a6490406bdd61ca6f90cfc6828d1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="glew_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a> small3d::Renderer::generateTexture </td>
+          <td class="memname">GLuint small3d::Renderer::generateTexture </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -212,13 +236,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="wglew_8h.html#a500a82aecba06f4550f6849b8099ca21">int</a>&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="wglew_8h.html#a500a82aecba06f4550f6849b8099ca21">int</a>&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>height</em>&#160;</td>
         </tr>
         <tr>
@@ -246,9 +270,9 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="glew_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a> small3d::Renderer::getTextureHandle </td>
+          <td class="memname">GLuint small3d::Renderer::getTextureHandle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
@@ -264,20 +288,20 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a239f0f3cdf74bff3ce9b9fc9c3353512"></a>
+<a class="anchor" id="a3f817f1d00f0c5b5103f3d86fb2635e5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a> small3d::Renderer::init </td>
+          <td class="memname">void small3d::Renderer::init </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="wglew_8h.html#a500a82aecba06f4550f6849b8099ca21">int</a>&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="wglew_8h.html#a500a82aecba06f4550f6849b8099ca21">int</a>&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>height</em>, </td>
         </tr>
         <tr>
@@ -289,14 +313,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a>&#160;</td>
-          <td class="paramname"><em>ttfFontPath</em> = <code>&quot;../blocks/dimitrikourk/small3d/Fonts/CrusoeText-Regular.ttf&quot;</code>, </td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>ttfFontPath</em> = <code>&quot;dimitrikourk/small3d/samplegame/resources/fonts/CrusoeText/CrusoeText-Regular.ttf&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a>&#160;</td>
-          <td class="paramname"><em>shadersPath</em> = <code>&quot;../blocks/dimitrikourk/small3d/Shaders/&quot;</code>&#160;</td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>shadersPath</em> = <code>&quot;dimitrikourk/small3d/resources/shaders/&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -309,8 +333,8 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">width</td><td>The width of the window </td></tr>
     <tr><td class="paramname">height</td><td>The height of the window </td></tr>
-    <tr><td class="paramname">fullScreen</td><td>Will the <a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using OpenGL v2.1. ">Renderer</a> run in full screen mode? </td></tr>
-    <tr><td class="paramname">ttfFontPath</td><td>The path to the TrueType font to be used by the <a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using OpenGL v2.1. ">Renderer</a>, including its filename. It defaults to the font provided by the engine but, even if the same one is used for an game, most probably the path to where it is placed will need to be specified here. Only one font can be used by the engine at present but that will change in the near future. </td></tr>
+    <tr><td class="paramname">fullScreen</td><td>Will the <a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using either OpenGL v3.3 or v2.1. ">Renderer</a> run in full screen mode? If set to true, the width and height have to correspond to the active screen resolution, in order for the scene to be displayed properly. </td></tr>
+    <tr><td class="paramname">ttfFontPath</td><td>The path to the TrueType font to be used by the <a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using either OpenGL v3.3 or v2.1. ">Renderer</a>, including its filename. It defaults to the font provided by the engine but, even if the same one is used for an game, most probably the path to where it is placed will need to be specified here. Only one font can be used by the engine at present but that will change in the near future. </td></tr>
     <tr><td class="paramname">shadersPath</td><td>The path where the shaders will be stored, relative to the application's executing directory. It defaults to the path provided by the engine, but it can be changed, so as to accommodate for executables which are going to be using it. Even though the path to the folder can be changed, the folder structure within it and the names of the shaders must remain as provided. The shader code can be changed, provided that their inputs and outputs are maintained the same. </td></tr>
   </table>
   </dd>
@@ -318,22 +342,55 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa80da59946832e933adcc554236f1fca"></a>
+<a class="anchor" id="aa43b489f20b4befa634ed776bdf15b80"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a> small3d::Renderer::renderSceneObjects </td>
+          <td class="memname">void small3d::Renderer::renderImage </td>
           <td>(</td>
-          <td class="paramtype">const shared_ptr&lt; vector&lt; shared_ptr&lt; <a class="el" href="classsmall3d_1_1_scene_object.html">SceneObject</a> &gt; &gt; &gt;&#160;</td>
-          <td class="paramname"><em>sceneObjects</em></td><td>)</td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>textureName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Render an image. The image is in effect a textured quad, since 4 vertex positions are passed to this method, in order to define its position and size. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>The vertices </td></tr>
+    <tr><td class="paramname">textureName</td><td>The name of the texture, containing the image (must have been loaded with <a class="el" href="classsmall3d_1_1_renderer.html#a0ae1a6490406bdd61ca6f90cfc6828d1">generateTexture()</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aff4d928b9428578cc6ea2de8985f9389"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void small3d::Renderer::renderSceneObject </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classsmall3d_1_1_scene_object.html">SceneObject</a> &gt;&#160;</td>
+          <td class="paramname"><em>sceneObject</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Render the scene objects </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Render a scene object </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sceneObjects</td><td>The scene objects </td></tr>
+    <tr><td class="paramname">sceneObject</td><td>The scene object </td></tr>
   </table>
   </dd>
 </dl>
@@ -345,9 +402,9 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a> small3d::Renderer::renderText </td>
+          <td class="memname">void small3d::Renderer::renderText </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>text</em>, </td>
         </tr>
         <tr>
@@ -401,45 +458,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a04892bb74f5b6e4d7b7edb214e1bd576"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a> small3d::Renderer::renderTexturedQuad </td>
-          <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>vertices</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="glew_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a> &amp;&#160;</td>
-          <td class="paramname"><em>textureName</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Render a textured quad </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vertices</td><td>The vertices </td></tr>
-    <tr><td class="paramname">textureName</td><td>The name of the texture (must have been loaded with <a class="el" href="classsmall3d_1_1_renderer.html#a0ae1a6490406bdd61ca6f90cfc6828d1">generateTexture()</a>) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="acdc83f2aaaf3f41f35e99c1eabc6ac98"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="wglew_8h.html#aeea6e3dfae3acf232096f57d2d57f084">void</a> small3d::Renderer::swapBuffers </td>
+          <td class="memname">void small3d::Renderer::swapBuffers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -450,6 +474,49 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a77353e63ccea1c4f33ff9cba9eb81978"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec3 small3d::Renderer::lightDirection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vector indicating the direction of the light in the scene. </p>
+
+</div>
+</div>
+<a class="anchor" id="a27a489ee5114ea7675ce47d6d2a915b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float small3d::Renderer::zFar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The far Z value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1bcac66877275b4f0121ff88547f9874"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float small3d::Renderer::zNear</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The near Z value. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
 <li><a class="el" href="_renderer_8cpp.html">Renderer.cpp</a></li>
@@ -457,7 +524,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 19 2014 18:50:02 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 19 2014 01:50:15 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

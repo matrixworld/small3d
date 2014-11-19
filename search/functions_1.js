@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['bool',['BOOL',['../wglew_8h.html#aac8eace2cea06e3f4abec4e884000342',1,'wglew.h']]],
-  ['boundingboxes',['BoundingBoxes',['../structsmall3d_1_1_bounding_boxes.html#ae947dd75be7f72030d8df70d9b60ee05',1,'small3d::BoundingBoxes']]]
+  ['boundingboxes',['BoundingBoxes',['../structsmall3d_1_1_bounding_boxes.html#af157a7ef1ed8150b2b9d53317d1bd8ff',1,'small3d::BoundingBoxes']]]
 ];

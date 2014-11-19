@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['renderer',['Renderer',['../classsmall3d_1_1_renderer.html',1,'small3d']]]
+  ['sceneobject',['SceneObject',['../classsmall3d_1_1_scene_object.html',1,'small3d']]]
 ];

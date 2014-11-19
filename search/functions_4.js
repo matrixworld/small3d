@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['engineexception',['EngineException',['../classsmall3d_1_1_engine_exception.html#aee5f0bd1a32eb1c803b4e982a0db5ee2',1,'small3d::EngineException::EngineException()'],['../classsmall3d_1_1_engine_exception.html#a20b4dcfc426d2855ea394c6d79e7bbff',1,'small3d::EngineException::EngineException(string message)']]],
-  ['enginelog',['EngineLog',['../classsmall3d_1_1_engine_log.html#a4b261ae7a4af91aaab9f6b8199888563',1,'small3d::EngineLog']]]
+  ['exception',['Exception',['../classsmall3d_1_1_exception.html#a5a4038fbaa4356f323a86dfdde650cac',1,'small3d::Exception::Exception()'],['../classsmall3d_1_1_exception.html#a83ed639caa80d9172e963c0165e6e121',1,'small3d::Exception::Exception(string message)']]]
 ];

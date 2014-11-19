@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['renderer',['Renderer',['../classsmall3d_1_1_renderer.html#ac5aec8cb6a8b4fab3332b7c84482ab4e',1,'small3d::Renderer']]],
-  ['rendersceneobjects',['renderSceneObjects',['../classsmall3d_1_1_renderer.html#aa80da59946832e933adcc554236f1fca',1,'small3d::Renderer']]],
-  ['rendertext',['renderText',['../classsmall3d_1_1_renderer.html#a946f63bb3e822ff0e30a19a96e8fcf99',1,'small3d::Renderer']]],
-  ['rendertexturedquad',['renderTexturedQuad',['../classsmall3d_1_1_renderer.html#a04892bb74f5b6e4d7b7edb214e1bd576',1,'small3d::Renderer']]],
-  ['resetanimation',['resetAnimation',['../classsmall3d_1_1_scene_object.html#a5df12246f187a1660fc54a14e6d7c96d',1,'small3d::SceneObject']]],
-  ['rotatex',['rotateX',['../namespacesmall3d.html#aabd134ed7402a57f7a362610d1560a38',1,'small3d']]],
-  ['rotatey',['rotateY',['../namespacesmall3d.html#a93ce0da871f1c9633b98925c47cfc824',1,'small3d']]],
-  ['rotatez',['rotateZ',['../namespacesmall3d.html#a82fe44c9070bedea95ad35b14a6de737',1,'small3d']]]
+  ['sceneobject',['SceneObject',['../classsmall3d_1_1_scene_object.html#a99ecb7effa9c0afe91afb25d52464ac0',1,'small3d::SceneObject']]],
+  ['setcolour',['setColour',['../classsmall3d_1_1_scene_object.html#a2b53fbdf7fcc78ac45742d88d4ae8a79',1,'small3d::SceneObject']]],
+  ['setframedelay',['setFrameDelay',['../classsmall3d_1_1_scene_object.html#a0d43be64361b47c9f3016179e456b863',1,'small3d::SceneObject']]],
+  ['setoffset',['setOffset',['../classsmall3d_1_1_scene_object.html#a81f28ee91e7195f274e045f57c097829',1,'small3d::SceneObject']]],
+  ['setrotation',['setRotation',['../classsmall3d_1_1_scene_object.html#a67a70cea3fe746825f95024051d2daa7',1,'small3d::SceneObject']]],
+  ['startanimating',['startAnimating',['../classsmall3d_1_1_scene_object.html#a21bd126617420837019165e892b1ff6b',1,'small3d::SceneObject']]],
+  ['stopanimating',['stopAnimating',['../classsmall3d_1_1_scene_object.html#a005d922b169d1922f2f28402cd7a0cf6',1,'small3d::SceneObject']]],
+  ['swapbuffers',['swapBuffers',['../classsmall3d_1_1_renderer.html#acdc83f2aaaf3f41f35e99c1eabc6ac98',1,'small3d::Renderer']]]
 ];
