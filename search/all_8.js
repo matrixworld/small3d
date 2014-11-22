@@ -9,5 +9,6 @@ var searchData=
   ['logger',['Logger',['../classsmall3d_1_1_logger.html#abc1c379603a1a9636767bcd9799e0def',1,'small3d::Logger::Logger()'],['../_logger_8cpp.html#a602215fa5e4da4e67434e454bbbf39ae',1,'logger():&#160;Logger.cpp'],['../_logger_8h.html#a602215fa5e4da4e67434e454bbbf39ae',1,'logger():&#160;Logger.cpp']]],
   ['logger_2ecpp',['Logger.cpp',['../_logger_8cpp.html',1,'']]],
   ['logger_2eh',['Logger.h',['../_logger_8h.html',1,'']]],
-  ['loginfo',['LOGINFO',['../_logger_8h.html#a98d4e4ceb51e0eb8db5abdd2a298fcb2',1,'Logger.h']]]
+  ['loginfo',['LOGINFO',['../_logger_8h.html#a98d4e4ceb51e0eb8db5abdd2a298fcb2',1,'Logger.h']]],
+  ['loglevel',['LogLevel',['../namespacesmall3d.html#a3806e98488fab560ee2f4b5972297597',1,'small3d']]]
 ];

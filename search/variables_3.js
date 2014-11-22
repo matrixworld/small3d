@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['normalsdata',['normalsData',['../structsmall3d_1_1_model.html#a1c0a59366f5457ccaacebd4640107991',1,'small3d::Model']]],
-  ['normalsdatacomponentcount',['normalsDataComponentCount',['../structsmall3d_1_1_model.html#af806c5078cdeabbfb695f4f964904e17',1,'small3d::Model']]],
-  ['normalsdatasize',['normalsDataSize',['../structsmall3d_1_1_model.html#a0612b22dd1eaced76b45853e8b0dead9',1,'small3d::Model']]]
+  ['lightdirection',['lightDirection',['../classsmall3d_1_1_renderer.html#a77353e63ccea1c4f33ff9cba9eb81978',1,'small3d::Renderer']]],
+  ['logger',['logger',['../_logger_8cpp.html#a602215fa5e4da4e67434e454bbbf39ae',1,'logger():&#160;Logger.cpp'],['../_logger_8h.html#a602215fa5e4da4e67434e454bbbf39ae',1,'logger():&#160;Logger.cpp']]]
 ];

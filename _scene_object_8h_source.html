@@ -110,78 +110,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesmall3d.html">small3d</a></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classsmall3d_1_1_scene_object.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsmall3d_1_1_scene_object.html">SceneObject</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="structsmall3d_1_1_model.html">Model</a>* model;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">bool</span> animating;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">int</span> frameDelay;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> currentFrame;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">int</span> framesWaited;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">int</span> numFrames;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        shared_ptr&lt;Image&gt; texture;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">string</span> name;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        shared_ptr&lt;glm::vec4&gt; colour;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        shared_ptr&lt;glm::vec3&gt; offset;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        shared_ptr&lt;glm::vec3&gt; rotation;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        shared_ptr&lt;BoundingBoxes&gt; boundingBoxes;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> initPropVectors();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="classsmall3d_1_1_scene_object.html">SceneObject</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;modelPath,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;numFrames = 1, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;texturePath = <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;boundingBoxesPath = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classsmall3d_1_1_scene_object.html">SceneObject</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classsmall3d_1_1_scene_object.html">   32</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsmall3d_1_1_scene_object.html">SceneObject</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="structsmall3d_1_1_model.html">Model</a>* model;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">bool</span> animating;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">int</span> frameDelay;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> currentFrame;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">int</span> framesWaited;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> numFrames;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        shared_ptr&lt;Image&gt; texture;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">string</span> name;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        shared_ptr&lt;glm::vec4&gt; colour;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        shared_ptr&lt;glm::vec3&gt; offset;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        shared_ptr&lt;glm::vec3&gt; rotation;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        shared_ptr&lt;BoundingBoxes&gt; boundingBoxes;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> initPropVectors();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classsmall3d_1_1_scene_object.html">SceneObject</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;modelPath,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;numFrames = 1, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;texturePath = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;boundingBoxesPath = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="structsmall3d_1_1_model.html">Model</a>&amp; getModel() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">const</span> shared_ptr&lt;Image&gt;&amp; getTexture() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> getName();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">const</span> shared_ptr&lt;glm::vec4&gt;&amp; getColour();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> setColour(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;r, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;g, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;b, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;a);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">const</span> shared_ptr&lt;glm::vec3&gt;&amp; getOffset() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">void</span> setOffset(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;x, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;y, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;z);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">const</span> shared_ptr&lt;glm::vec3&gt;&amp; getRotation() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">void</span> setRotation(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;x, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;y, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;z);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">void</span> startAnimating();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classsmall3d_1_1_scene_object.html">SceneObject</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="structsmall3d_1_1_model.html">Model</a>&amp; getModel() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">const</span> shared_ptr&lt;Image&gt;&amp; getTexture() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> getName();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">const</span> shared_ptr&lt;glm::vec4&gt;&amp; getColour();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">void</span> setColour(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;r, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;g, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;b, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;a);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">const</span> shared_ptr&lt;glm::vec3&gt;&amp; getOffset() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">void</span> setOffset(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;x, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;y, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;z);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">const</span> shared_ptr&lt;glm::vec3&gt;&amp; getRotation() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">void</span> setRotation(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;x, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;y, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;z);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> stopAnimating();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> startAnimating();</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">void</span> resetAnimation();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">void</span> stopAnimating();</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordtype">void</span> setFrameDelay(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;delay);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> animate();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordtype">void</span> resetAnimation();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> setFrameDelay(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;delay);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">bool</span> collidesWithPoint(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    };</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
-<div class="ttc" id="structsmall3d_1_1_model_html"><div class="ttname"><a href="structsmall3d_1_1_model.html">small3d::Model</a></div><div class="ttdoc">A model. It can be a simple object or a game character. It is loaded from a Wavefront ...</div><div class="ttdef"><b>Definition:</b> Model.h:21</div></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">void</span> animate();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordtype">bool</span> collidesWithPoint(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    };</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<div class="ttc" id="structsmall3d_1_1_model_html"><div class="ttname"><a href="structsmall3d_1_1_model.html">small3d::Model</a></div><div class="ttdoc">A 3D model. </div><div class="ttdef"><b>Definition:</b> Model.h:25</div></div>
 <div class="ttc" id="namespacesmall3d_html"><div class="ttname"><a href="namespacesmall3d.html">small3d</a></div><div class="ttdef"><b>Definition:</b> BoundingBoxes.cpp:20</div></div>
 <div class="ttc" id="_bounding_boxes_8h_html"><div class="ttname"><a href="_bounding_boxes_8h.html">BoundingBoxes.h</a></div></div>
 <div class="ttc" id="_model_8h_html"><div class="ttname"><a href="_model_8h.html">Model.h</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
 <div class="ttc" id="_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="classsmall3d_1_1_scene_object_html"><div class="ttname"><a href="classsmall3d_1_1_scene_object.html">small3d::SceneObject</a></div><div class="ttdef"><b>Definition:</b> SceneObject.h:27</div></div>
+<div class="ttc" id="classsmall3d_1_1_scene_object_html"><div class="ttname"><a href="classsmall3d_1_1_scene_object.html">small3d::SceneObject</a></div><div class="ttdoc">An object that appears on the 3D scene. It is made up of one or more models (the latter for animation...</div><div class="ttdef"><b>Definition:</b> SceneObject.h:32</div></div>
 <div class="ttc" id="_image_8h_html"><div class="ttname"><a href="_image_8h.html">Image.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 19 2014 01:50:15 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 22 2014 22:39:13 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

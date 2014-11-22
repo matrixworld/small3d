@@ -5,7 +5,7 @@ var searchData=
   ['renderer',['Renderer',['../classsmall3d_1_1_renderer.html#a014d65e85109726ab2825baaf4c656c8',1,'small3d::Renderer']]],
   ['renderer_2ecpp',['Renderer.cpp',['../_renderer_8cpp.html',1,'']]],
   ['renderer_2eh',['Renderer.h',['../_renderer_8h.html',1,'']]],
-  ['renderimage',['renderImage',['../classsmall3d_1_1_renderer.html#aa43b489f20b4befa634ed776bdf15b80',1,'small3d::Renderer']]],
+  ['renderimage',['renderImage',['../classsmall3d_1_1_renderer.html#add3942002e4581edd1eae6b2c7b393b6',1,'small3d::Renderer']]],
   ['rendersceneobject',['renderSceneObject',['../classsmall3d_1_1_renderer.html#aff4d928b9428578cc6ea2de8985f9389',1,'small3d::Renderer']]],
   ['rendertext',['renderText',['../classsmall3d_1_1_renderer.html#a946f63bb3e822ff0e30a19a96e8fcf99',1,'small3d::Renderer']]],
   ['resetanimation',['resetAnimation',['../classsmall3d_1_1_scene_object.html#a5df12246f187a1660fc54a14e6d7c96d',1,'small3d::SceneObject']]],
