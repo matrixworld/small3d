@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wavefrontloader_2ecpp',['WavefrontLoader.cpp',['../_wavefront_loader_8cpp.html',1,'']]],
-  ['wavefrontloader_2eh',['WavefrontLoader.h',['../_wavefront_loader_8h.html',1,'']]]
+  ['text_2ecpp',['Text.cpp',['../_text_8cpp.html',1,'']]],
+  ['text_2eh',['Text.h',['../_text_8h.html',1,'']]]
 ];

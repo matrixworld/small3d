@@ -110,13 +110,16 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A 3D model.  <a href="structsmall3d_1_1_model.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_model_loader.html">ModelLoader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that loads a model from a file, into a <a class="el" href="structsmall3d_1_1_model.html" title="A 3D model. ">Model</a> object.  <a href="classsmall3d_1_1_model_loader.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that loads a model from a file, into a <a class="el" href="structsmall3d_1_1_model.html" title="A 3D model. ">Model</a> object. (abstract class)  <a href="classsmall3d_1_1_model_loader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_renderer.html">Renderer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsmall3d_1_1_renderer.html" title="Renderer class, which can render using either OpenGL v3.3 or v2.1. ">Renderer</a> class, which can render using either OpenGL v3.3 or v2.1.  <a href="classsmall3d_1_1_renderer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_scene_object.html">SceneObject</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object that appears on the 3D scene. It is made up of one or more models (the latter for animation), together with information about positioning and rotation and collision detection functionality.  <a href="classsmall3d_1_1_scene_object.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmall3d_1_1_text.html">Text</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for rendering text.  <a href="structsmall3d_1_1_text.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_wavefront_loader.html">WavefrontLoader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that loads a model from a wavefront .obj file, into a <a class="el" href="structsmall3d_1_1_model.html" title="A 3D model. ">Model</a> object.  <a href="classsmall3d_1_1_wavefront_loader.html#details">More...</a><br /></td></tr>
@@ -147,6 +150,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa1146f234d6432eacb5104f91dcd12dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13b24066a081a0c9d08ab181d9033333"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmall3d.html#a13b24066a081a0c9d08ab181d9033333">openglErrorToString</a> (GLenum <a class="el" href="namespacesmall3d.html#a3806e98488fab560ee2f4b5972297597a7eca15b592f5dad55d6a6afd76d03351">error</a>)</td></tr>
 <tr class="separator:a13b24066a081a0c9d08ab181d9033333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad71582dbdc4bd569442e42ef3bbff6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmall3d.html#adad71582dbdc4bd569442e42ef3bbff6">intToStr</a> (int number)</td></tr>
+<tr class="separator:adad71582dbdc4bd569442e42ef3bbff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a3806e98488fab560ee2f4b5972297597"></a>
@@ -245,6 +250,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="adad71582dbdc4bd569442e42ef3bbff6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string small3d::intToStr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a13b24066a081a0c9d08ab181d9033333"></a>
 <div class="memitem">
 <div class="memproto">
@@ -333,7 +354,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2014 01:20:46 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 24 2014 01:00:09 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
