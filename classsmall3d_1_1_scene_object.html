@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classsmall3d_1_1_scene_object-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">small3d::SceneObject Class Reference</div>  </div>
@@ -138,6 +139,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0a722eafd61700974e95cc5df13dedfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad431252bfac1920f3fa8e981d7d6dc36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_scene_object.html#ad431252bfac1920f3fa8e981d7d6dc36">collidesWithPoint</a> (float x, float y, float z)</td></tr>
 <tr class="separator:ad431252bfac1920f3fa8e981d7d6dc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9e32ebea5342a32e3231a4feff6724"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_scene_object.html#a8a9e32ebea5342a32e3231a4feff6724">collidesWithSceneObject</a> (shared_ptr&lt; <a class="el" href="classsmall3d_1_1_scene_object.html">SceneObject</a> &gt; otherObject)</td></tr>
+<tr class="memdesc:a8a9e32ebea5342a32e3231a4feff6724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the object collides with another given object.  <a href="#a8a9e32ebea5342a32e3231a4feff6724">More...</a><br /></td></tr>
+<tr class="separator:a8a9e32ebea5342a32e3231a4feff6724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a797d9110b5a4efb3341bd1278cc43457"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_scene_object.html#a797d9110b5a4efb3341bd1278cc43457">boundingBoxes</a></td></tr>
+<tr class="memdesc:a797d9110b5a4efb3341bd1278cc43457"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bounding boxes for the object, used for collision detection.  <a href="#a797d9110b5a4efb3341bd1278cc43457">More...</a><br /></td></tr>
+<tr class="separator:a797d9110b5a4efb3341bd1278cc43457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An object that appears on the 3D scene. It is made up of one or more models (the latter for animation), together with information about positioning and rotation and collision detection functionality. </p>
@@ -276,6 +286,31 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if a collision is detected, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8a9e32ebea5342a32e3231a4feff6724"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool small3d::SceneObject::collidesWithSceneObject </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classsmall3d_1_1_scene_object.html">SceneObject</a> &gt;&#160;</td>
+          <td class="paramname"><em>otherObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the object collides with another given object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otherObject</td><td>The other object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if there is a collision, false if not. </dd></dl>
 
 </div>
 </div>
@@ -572,6 +607,21 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a797d9110b5a4efb3341bd1278cc43457"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;<a class="el" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a>&gt; small3d::SceneObject::boundingBoxes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The bounding boxes for the object, used for collision detection. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_scene_object_8h_source.html">SceneObject.h</a></li>
 <li><a class="el" href="_scene_object_8cpp.html">SceneObject.cpp</a></li>
@@ -579,7 +629,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 24 2014 01:00:10 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 27 2014 00:29:20 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

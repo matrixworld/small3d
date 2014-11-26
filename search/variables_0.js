@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['cameraposition',['cameraPosition',['../classsmall3d_1_1_renderer.html#a98e23bfad9181afafcf6f64655698c35',1,'small3d::Renderer']]],
-  ['camerarotation',['cameraRotation',['../classsmall3d_1_1_renderer.html#ab560a8768b39a18d938f2a2de943c618',1,'small3d::Renderer']]]
+  ['boundingboxes',['boundingBoxes',['../classsmall3d_1_1_scene_object.html#a797d9110b5a4efb3341bd1278cc43457',1,'small3d::SceneObject']]]
 ];

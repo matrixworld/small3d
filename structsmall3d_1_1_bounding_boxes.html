@@ -111,8 +111,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5f7a4ee6f870c2d4c4d8e1c60c15e361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6823f7ff5c15362249c5e0bcaeca95b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmall3d_1_1_bounding_boxes.html#af6823f7ff5c15362249c5e0bcaeca95b">loadFromFile</a> (string fileLocation)</td></tr>
 <tr class="separator:af6823f7ff5c15362249c5e0bcaeca95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a299cc3966264b61c47ff858ca7898d9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmall3d_1_1_bounding_boxes.html#a299cc3966264b61c47ff858ca7898d9f">pointCollides</a> (const float &amp;pointX, const float &amp;pointY, const float &amp;pointZ, const float &amp;boxesX, const float &amp;boxesY, const float &amp;boxesZ, const float &amp;boxesRotation)</td></tr>
-<tr class="separator:a299cc3966264b61c47ff858ca7898d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa9bcc6c43ca4cdae4358d5fd09ef41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmall3d_1_1_bounding_boxes.html#a5fa9bcc6c43ca4cdae4358d5fd09ef41">pointIsWithin</a> (const float &amp;pointX, const float &amp;pointY, const float &amp;pointZ, const float &amp;boxesX, const float &amp;boxesY, const float &amp;boxesZ, shared_ptr&lt; glm::vec3 &gt; boxesRotation)</td></tr>
+<tr class="separator:a5fa9bcc6c43ca4cdae4358d5fd09ef41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43a1a943ee905c036ac28044a86ae53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmall3d_1_1_bounding_boxes.html#ac43a1a943ee905c036ac28044a86ae53">boxesAreWithin</a> (shared_ptr&lt; <a class="el" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a> &gt; otherBoxes, const float &amp;otherBoxesX, const float &amp;otherBoxesY, const float &amp;otherBoxesZ, shared_ptr&lt; glm::vec3 &gt; otherBoxesRotation, const float &amp;boxesX, const float &amp;boxesY, const float &amp;boxesZ, shared_ptr&lt; glm::vec3 &gt; boxesRotation)</td></tr>
+<tr class="memdesc:ac43a1a943ee905c036ac28044a86ae53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if another set of bounding boxes collides with this set.  <a href="#ac43a1a943ee905c036ac28044a86ae53">More...</a><br /></td></tr>
+<tr class="separator:ac43a1a943ee905c036ac28044a86ae53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -159,6 +162,91 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac43a1a943ee905c036ac28044a86ae53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool small3d::BoundingBoxes::boxesAreWithin </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a> &gt;&#160;</td>
+          <td class="paramname"><em>otherBoxes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>otherBoxesX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>otherBoxesY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>otherBoxesZ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">shared_ptr&lt; glm::vec3 &gt;&#160;</td>
+          <td class="paramname"><em>otherBoxesRotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>boxesX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>boxesY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>boxesZ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">shared_ptr&lt; glm::vec3 &gt;&#160;</td>
+          <td class="paramname"><em>boxesRotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if another set of bounding boxes collides with this set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otherBoxes</td><td>The other boxes. </td></tr>
+    <tr><td class="paramname">otherBoxesX</td><td>The other boxes x coordinate. </td></tr>
+    <tr><td class="paramname">otherBoxesY</td><td>The other boxes y coordinate. </td></tr>
+    <tr><td class="paramname">otherBoxesZ</td><td>The other boxes z coordinate. </td></tr>
+    <tr><td class="paramname">otherBoxesRotation</td><td>The other boxes' rotation. </td></tr>
+    <tr><td class="paramname">boxesX</td><td>The boxes' x coordinate. </td></tr>
+    <tr><td class="paramname">boxesY</td><td>The boxes' y coordinate. </td></tr>
+    <tr><td class="paramname">boxesZ</td><td>The boxes' z coordinate. </td></tr>
+    <tr><td class="paramname">boxesRotation</td><td>The boxes' rotation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if it succeeds, false if it fails. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af6823f7ff5c15362249c5e0bcaeca95b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -182,12 +270,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a299cc3966264b61c47ff858ca7898d9f"></a>
+<a class="anchor" id="a5fa9bcc6c43ca4cdae4358d5fd09ef41"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool small3d::BoundingBoxes::pointCollides </td>
+          <td class="memname">bool small3d::BoundingBoxes::pointIsWithin </td>
           <td>(</td>
           <td class="paramtype">const float &amp;&#160;</td>
           <td class="paramname"><em>pointX</em>, </td>
@@ -225,7 +313,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramtype">shared_ptr&lt; glm::vec3 &gt;&#160;</td>
           <td class="paramname"><em>boxesRotation</em>&#160;</td>
         </tr>
         <tr>
@@ -235,16 +323,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if a point collides (or is inside) any of the boxes assuming that they are in a given offset and have a certain rotation</p>
+<p>Check if a point collides (or is inside) any of the boxes assuming that they are in a given offset and have a certain rotation. The reason the boxes' offset and rotation are passed as parameters is so that there is no need to keep track of them together with the corresponding information of the model they refer to.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pointX</td><td>The point x coordinate. </td></tr>
     <tr><td class="paramname">pointY</td><td>The point y coordinate. </td></tr>
     <tr><td class="paramname">pointZ</td><td>The point z coordinate. </td></tr>
-    <tr><td class="paramname">boxesX</td><td>The boxes x coordinate. </td></tr>
-    <tr><td class="paramname">boxesY</td><td>The boxes y coordinate. </td></tr>
-    <tr><td class="paramname">boxesZ</td><td>The boxes z coordinate. </td></tr>
-    <tr><td class="paramname">boxesRotation</td><td>The boxes rotation.</td></tr>
+    <tr><td class="paramname">boxesX</td><td>The boxes' x coordinate. </td></tr>
+    <tr><td class="paramname">boxesY</td><td>The boxes' y coordinate. </td></tr>
+    <tr><td class="paramname">boxesZ</td><td>The boxes' z coordinate. </td></tr>
+    <tr><td class="paramname">boxesRotation</td><td>The boxes' rotation.</td></tr>
   </table>
   </dd>
 </dl>
@@ -288,7 +376,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 24 2014 01:00:10 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 27 2014 00:29:20 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

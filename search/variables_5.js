@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['texturecoordsdata',['textureCoordsData',['../structsmall3d_1_1_model.html#a891d15e70a2740593704480d0f46edd9',1,'small3d::Model']]],
-  ['texturecoordsdatacomponentcount',['textureCoordsDataComponentCount',['../structsmall3d_1_1_model.html#a7b930748f04a25d4b7960c32a0de8a2a',1,'small3d::Model']]],
-  ['texturecoordsdatasize',['textureCoordsDataSize',['../structsmall3d_1_1_model.html#adca319767e0346ba16058445674674f7',1,'small3d::Model']]],
-  ['ttfinitialised',['ttfInitialised',['../_text_8cpp.html#a09cd3e0ce9162e4ce34b3ccc1c26f848',1,'ttfInitialised():&#160;Text.cpp'],['../_text_8h.html#a09cd3e0ce9162e4ce34b3ccc1c26f848',1,'ttfInitialised():&#160;Text.cpp']]]
+  ['normalsdata',['normalsData',['../structsmall3d_1_1_model.html#a1c0a59366f5457ccaacebd4640107991',1,'small3d::Model']]],
+  ['normalsdatacomponentcount',['normalsDataComponentCount',['../structsmall3d_1_1_model.html#af806c5078cdeabbfb695f4f964904e17',1,'small3d::Model']]],
+  ['normalsdatasize',['normalsDataSize',['../structsmall3d_1_1_model.html#a0612b22dd1eaced76b45853e8b0dead9',1,'small3d::Model']]]
 ];

@@ -100,43 +100,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_logger_8h.html">Logger.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesmall3d.html">small3d</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structsmall3d_1_1_bounding_boxes.html">   32</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">int</span> numBoxes;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        ~<a class="code" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structsmall3d_1_1_bounding_boxes.html#a24f042fd79a6fe815e9aad037b026601">   54</a></span>&#160;        vector&lt;float*&gt; *<a class="code" href="structsmall3d_1_1_bounding_boxes.html#a24f042fd79a6fe815e9aad037b026601">vertices</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structsmall3d_1_1_bounding_boxes.html#ae1fdc90142393d2ed443870bd96b7927">   60</a></span>&#160;        vector&lt;int*&gt; *<a class="code" href="structsmall3d_1_1_bounding_boxes.html#ae1fdc90142393d2ed443870bd96b7927">facesVertexIndexes</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> loadFromFile(<span class="keywordtype">string</span> fileLocation);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">bool</span> pointCollides(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;pointX, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;pointY, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;pointZ, </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesX, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesY, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesZ, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesRotation);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;dimitrikourk/glm/glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesmall3d.html">small3d</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structsmall3d_1_1_bounding_boxes.html">   33</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">int</span> numBoxes;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        ~<a class="code" href="structsmall3d_1_1_bounding_boxes.html">BoundingBoxes</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structsmall3d_1_1_bounding_boxes.html#a24f042fd79a6fe815e9aad037b026601">   55</a></span>&#160;        vector&lt;float*&gt; *<a class="code" href="structsmall3d_1_1_bounding_boxes.html#a24f042fd79a6fe815e9aad037b026601">vertices</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structsmall3d_1_1_bounding_boxes.html#ae1fdc90142393d2ed443870bd96b7927">   61</a></span>&#160;        vector&lt;int*&gt; *<a class="code" href="structsmall3d_1_1_bounding_boxes.html#ae1fdc90142393d2ed443870bd96b7927">facesVertexIndexes</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> loadFromFile(<span class="keywordtype">string</span> fileLocation);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">bool</span> pointIsWithin(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;pointX, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;pointY, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;pointZ, </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesX, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesY, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesZ, shared_ptr&lt;glm::vec3&gt; boxesRotation);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">bool</span> boxesAreWithin(shared_ptr&lt;BoundingBoxes&gt; otherBoxes, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;otherBoxesX, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;otherBoxesY,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;otherBoxesZ, shared_ptr&lt;glm::vec3&gt; otherBoxesRotation, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesX, </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesY, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;boxesZ, shared_ptr&lt;glm::vec3&gt; boxesRotation);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    };</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 <div class="ttc" id="namespacesmall3d_html"><div class="ttname"><a href="namespacesmall3d.html">small3d</a></div><div class="ttdef"><b>Definition:</b> BoundingBoxes.cpp:20</div></div>
-<div class="ttc" id="structsmall3d_1_1_bounding_boxes_html"><div class="ttname"><a href="structsmall3d_1_1_bounding_boxes.html">small3d::BoundingBoxes</a></div><div class="ttdoc">Bounding boxes for a model. Even though the loading logic is similar to that of the Model class...</div><div class="ttdef"><b>Definition:</b> BoundingBoxes.h:32</div></div>
+<div class="ttc" id="structsmall3d_1_1_bounding_boxes_html"><div class="ttname"><a href="structsmall3d_1_1_bounding_boxes.html">small3d::BoundingBoxes</a></div><div class="ttdoc">Bounding boxes for a model. Even though the loading logic is similar to that of the Model class...</div><div class="ttdef"><b>Definition:</b> BoundingBoxes.h:33</div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="structsmall3d_1_1_bounding_boxes_html_ae1fdc90142393d2ed443870bd96b7927"><div class="ttname"><a href="structsmall3d_1_1_bounding_boxes.html#ae1fdc90142393d2ed443870bd96b7927">small3d::BoundingBoxes::facesVertexIndexes</a></div><div class="ttdeci">vector&lt; int * &gt; * facesVertexIndexes</div><div class="ttdoc">Faces vertex indexes read from Wavefront .obj file. </div><div class="ttdef"><b>Definition:</b> BoundingBoxes.h:60</div></div>
-<div class="ttc" id="structsmall3d_1_1_bounding_boxes_html_a24f042fd79a6fe815e9aad037b026601"><div class="ttname"><a href="structsmall3d_1_1_bounding_boxes.html#a24f042fd79a6fe815e9aad037b026601">small3d::BoundingBoxes::vertices</a></div><div class="ttdeci">vector&lt; float * &gt; * vertices</div><div class="ttdoc">Vertex coordinates read from Wavefront .obj file. </div><div class="ttdef"><b>Definition:</b> BoundingBoxes.h:54</div></div>
+<div class="ttc" id="structsmall3d_1_1_bounding_boxes_html_ae1fdc90142393d2ed443870bd96b7927"><div class="ttname"><a href="structsmall3d_1_1_bounding_boxes.html#ae1fdc90142393d2ed443870bd96b7927">small3d::BoundingBoxes::facesVertexIndexes</a></div><div class="ttdeci">vector&lt; int * &gt; * facesVertexIndexes</div><div class="ttdoc">Faces vertex indexes read from Wavefront .obj file. </div><div class="ttdef"><b>Definition:</b> BoundingBoxes.h:61</div></div>
+<div class="ttc" id="structsmall3d_1_1_bounding_boxes_html_a24f042fd79a6fe815e9aad037b026601"><div class="ttname"><a href="structsmall3d_1_1_bounding_boxes.html#a24f042fd79a6fe815e9aad037b026601">small3d::BoundingBoxes::vertices</a></div><div class="ttdeci">vector&lt; float * &gt; * vertices</div><div class="ttdoc">Vertex coordinates read from Wavefront .obj file. </div><div class="ttdef"><b>Definition:</b> BoundingBoxes.h:55</div></div>
 <div class="ttc" id="_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 24 2014 01:00:09 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 27 2014 00:29:19 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
