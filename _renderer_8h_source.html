@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="small3d.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">small3d
-   &#160;<span id="projectnumber">4</span>
+   &#160;<span id="projectnumber">6</span>
    </div>
    <div id="projectbrief">A small, no fuss, 3D game engine</div>
   </td>
@@ -179,29 +179,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
 <div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classsmall3d_1_1_renderer.html#ab560a8768b39a18d938f2a2de943c618">  159</a></span>&#160;        glm::vec3 <a class="code" href="classsmall3d_1_1_renderer.html#ab560a8768b39a18d938f2a2de943c618">cameraRotation</a>;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        GLuint generateTexture(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name, <span class="keyword">const</span> <span class="keywordtype">float</span> *texture, <span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">void</span> deleteTexture(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        GLuint getTextureHandle(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">void</span> positionSceneObject(<span class="keyword">const</span> glm::vec3 &amp;offset, <span class="keyword">const</span> glm::vec3 &amp;rotation);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordtype">void</span> positionCamera();</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordtype">void</span> renderImage(<span class="keyword">const</span> <span class="keywordtype">float</span> *vertices, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;textureName, <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;perspective = <span class="keyword">false</span>, </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keyword">const</span> glm::vec3 &amp;offset = glm::vec3(0.0f, 0.0f, 0.0f));</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordtype">void</span> renderSceneObject(shared_ptr&lt;SceneObject&gt; sceneObject);</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classsmall3d_1_1_renderer.html#a16cad6462cacc418e9d470fa90677c40">  165</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classsmall3d_1_1_renderer.html#a16cad6462cacc418e9d470fa90677c40">lightIntensity</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        GLuint generateTexture(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name, <span class="keyword">const</span> <span class="keywordtype">float</span> *texture, <span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordtype">void</span> deleteTexture(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        GLuint getTextureHandle(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordtype">void</span> positionSceneObject(<span class="keyword">const</span> glm::vec3 &amp;offset, <span class="keyword">const</span> glm::vec3 &amp;rotation);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordtype">void</span> positionCamera();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordtype">void</span> renderImage(<span class="keyword">const</span> <span class="keywordtype">float</span> *vertices, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;textureName, <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;perspective = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keyword">const</span> glm::vec3 &amp;offset = glm::vec3(0.0f, 0.0f, 0.0f));</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordtype">void</span> clearScreen();</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordtype">void</span> swapBuffers();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">void</span> renderSceneObject(shared_ptr&lt;SceneObject&gt; sceneObject);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordtype">void</span> clearScreen();</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        ~<a class="code" href="classsmall3d_1_1_renderer.html">Renderer</a>();</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    };</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordtype">void</span> swapBuffers();</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        ~<a class="code" href="classsmall3d_1_1_renderer.html">Renderer</a>();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    };</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
 <div class="ttc" id="namespacesmall3d_html"><div class="ttname"><a href="namespacesmall3d.html">small3d</a></div><div class="ttdef"><b>Definition:</b> BoundingBoxes.cpp:20</div></div>
 <div class="ttc" id="_scene_object_8h_html"><div class="ttname"><a href="_scene_object_8h.html">SceneObject.h</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
@@ -210,10 +212,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="classsmall3d_1_1_renderer_html"><div class="ttname"><a href="classsmall3d_1_1_renderer.html">small3d::Renderer</a></div><div class="ttdoc">Renderer class, which can render using either OpenGL v3.3 or v2.1. </div><div class="ttdef"><b>Definition:</b> Renderer.h:48</div></div>
 <div class="ttc" id="classsmall3d_1_1_renderer_html_ab560a8768b39a18d938f2a2de943c618"><div class="ttname"><a href="classsmall3d_1_1_renderer.html#ab560a8768b39a18d938f2a2de943c618">small3d::Renderer::cameraRotation</a></div><div class="ttdeci">glm::vec3 cameraRotation</div><div class="ttdoc">The camera rotation (around the x, y and z axes) </div><div class="ttdef"><b>Definition:</b> Renderer.h:159</div></div>
+<div class="ttc" id="classsmall3d_1_1_renderer_html_a16cad6462cacc418e9d470fa90677c40"><div class="ttname"><a href="classsmall3d_1_1_renderer.html#a16cad6462cacc418e9d470fa90677c40">small3d::Renderer::lightIntensity</a></div><div class="ttdeci">float lightIntensity</div><div class="ttdoc">The light intensity (set to -1.0f if no lighting is to be used). </div><div class="ttdef"><b>Definition:</b> Renderer.h:165</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 27 2014 01:17:46 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 28 2014 01:44:03 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
