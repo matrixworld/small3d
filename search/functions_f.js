@@ -8,6 +8,8 @@ var searchData=
   ['_7emodelloader',['~ModelLoader',['../classsmall3d_1_1_model_loader.html#ae169baff76354bb13403cc35d511901d',1,'small3d::ModelLoader']]],
   ['_7erenderer',['~Renderer',['../classsmall3d_1_1_renderer.html#a32163440246ed8ea5016e15dfc781775',1,'small3d::Renderer']]],
   ['_7esceneobject',['~SceneObject',['../classsmall3d_1_1_scene_object.html#a8d41a83e03e18897b73cfb044bf21554',1,'small3d::SceneObject']]],
+  ['_7esound',['~Sound',['../classsmall3d_1_1_sound.html#ad099eea274cd698016aa32e40abc1b00',1,'small3d::Sound']]],
+  ['_7esounddata',['~SoundData',['../structsmall3d_1_1_sound_data.html#aa9c968f634a933a6d80a5f251c75b7c7',1,'small3d::SoundData']]],
   ['_7etext',['~Text',['../structsmall3d_1_1_text.html#a55661b8a47334895447395902b863c86',1,'small3d::Text']]],
   ['_7ewavefrontloader',['~WavefrontLoader',['../classsmall3d_1_1_wavefront_loader.html#abee53cc86e2c39b8c870824941e0ab98',1,'small3d::WavefrontLoader']]]
 ];
