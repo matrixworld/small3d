@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="small3d.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">small3d
-   &#160;<span id="projectnumber">9</span>
+   &#160;<span id="projectnumber">1.00</span>
    </div>
    <div id="projectbrief">A small, no fuss, 3D game engine</div>
   </td>
@@ -113,8 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad099eea274cd698016aa32e40abc1b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb9742a8a0d5a5d24b0cfd1d48e6ee6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_sound.html#aeb9742a8a0d5a5d24b0cfd1d48e6ee6f">load</a> (const string &amp;soundFilePath, const string &amp;soundName)</td></tr>
 <tr class="separator:aeb9742a8a0d5a5d24b0cfd1d48e6ee6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af98e34fcd9300d30d72c72bbcdd9f35b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_sound.html#af98e34fcd9300d30d72c72bbcdd9f35b">play</a> (const string &amp;soundName)</td></tr>
-<tr class="separator:af98e34fcd9300d30d72c72bbcdd9f35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadae117b5afcae3d87717c331f587e85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_sound.html#aadae117b5afcae3d87717c331f587e85">play</a> (const string &amp;soundName)</td></tr>
+<tr class="separator:aadae117b5afcae3d87717c331f587e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cc869e067daf723b47c0d558d74bfb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmall3d_1_1_sound.html#a5cc869e067daf723b47c0d558d74bfb4">deleteSound</a> (const string &amp;soundName)</td></tr>
 <tr class="separator:a5cc869e067daf723b47c0d558d74bfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -168,7 +168,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Delete a sound from memory.</p>
-<p>The name of the sound to be deleted. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">soundName</td><td>The name of the sound to be deleted. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -196,17 +201,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Loads a sound from a file. For the moment, the file can only be an .ogg file.</p>
-<p>The path to the file, relative to the directory of execution.</p>
-<p>The name by which the loaded sound will be identified. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">soundFilePath</td><td>The path to the file, relative to the directory of execution.</td></tr>
+    <tr><td class="paramname">soundName</td><td>The name by which the loaded sound will be identified. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="af98e34fcd9300d30d72c72bbcdd9f35b"></a>
+<a class="anchor" id="aadae117b5afcae3d87717c331f587e85"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int small3d::Sound::play </td>
+          <td class="memname">void small3d::Sound::play </td>
           <td>(</td>
           <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>soundName</em></td><td>)</td>
@@ -215,8 +225,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Plays a sound.</p>
-<p>The name of the sound to be played.</p>
-<dl class="section return"><dt>Returns</dt><dd>The id of the stream playing the sound </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">soundName</td><td>The name of the sound to be played. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -227,7 +241,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 21 2014 17:49:43 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 21 2014 22:00:01 for small3d by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
